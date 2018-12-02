@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+<!-- vv Don't Edit vv -->
+<append xpath="/blocks">
+<block name="invisibleRespawnerMaster">	<!-- Tweak Car & Harvest Respawn Start -->
+	<property name="Class" value="PlantGrowing"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Material" value="Mtallgrass"/>
+	<property name="StabilitySupport" value="false"/>	<!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Trees/Prefabs/Stump"/>
+	<property name="ModelOffset" value="0,-255,0"/>	<!-- Invisible prop. -->
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Place" value="TowardsPlacer"/>
+	<property name="ShowModelOnFall" value="false"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" count="1" prob="0.75" stick_chance="1"/>
+	<property name="CanDecorateOnSlopes" value="false"/>
+	<property name="PlantGrowing.LightLevelGrow" value="0"/>
+	<property name="PlantGrowing.FertileLevel" value="0"/>
+	<property name="PlantGrowing.GrowthRate" value="990"/>
+	<property name="PlantGrowing.IsRandom" value="true"/>
+</block>
+</append>
+<!-- ^^ Don't edit ^^-->
+
+
+<!-- **** Car **** -->
+<append xpath="/*/block[@name='cntCar03SedanDamage2']">
+	<property name="DowngradeBlock" value="cntCar03SedanDamage3"/>
+</append>
+<append xpath="/blocks">
+	<block name="cntCar03SedanDamage3">
+		<property name="Extends" value="invisibleRespawnerMaster"/>
+		<property name="CreativeMode" value="Dev"/>
+		<property name="DisplayType" value="blockMulti" />	<!-- Use for multiblock -->
+		<property name="MultiBlockDim" value="2,2,6"/>
+		<property name="PlantGrowing.Next" value="carsRandomHelper"/>
+		<property name="PlantGrowing.GrowthRate" value="990"/>	<!-- 66 x 15day = 990 -->
+		<property name="PlantGrowing.IsRandom" value="true"/>	<!-- 5~30days -->
+	</block>
+</append>
+
+<!-- **** Tire **** -->
+<!--
+<append xpath="/*/block[@name='tire']">
+	<property name="DowngradeBlock" value="tireDamage"/>
+</append>
+<append xpath="/blocks">
+	<block name="tireDamage">
+		<property name="Extends" value="invisibleRespawnerMaster"/>
+		<property name="CreativeMode" value="Dev"/>
+		<property name="PlantGrowing.Next" value="tire"/>
+		<property name="PlantGrowing.GrowthRate" value="990"/>
+		<property name="PlantGrowing.IsRandom" value="true"/>
+	</block>
+</append>
+-->
+</configs>

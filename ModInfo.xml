@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Respawnable Blocks" />
+		<Description value="Make blocks respawn after 3-30 days. Example for car is included." />
+		<Author value="Alphado-Jaki" />
+		<Version value="17e208.0" />
+	</ModInfo>
+</xml>
+<!--
+<xml>
+	<ModInfo>
+		<Name value="ブロックリスポーン" />
+		<Description value="ブロックが3～30日でリスポーンします。車をリスポーンする例を入れています。" />
+		<Author value="アルファド" />
+		<Version value="17eb208.0" />
+	</ModInfo>
+</xml>
+-->
